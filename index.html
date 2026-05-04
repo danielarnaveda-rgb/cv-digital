@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio / CV Digital</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf6f9;
+            color: #333;
+            margin: 0;
+        }
+        nav {
+            background-color: #f8c8dc;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        header {
+            text-align: center;
+            background-color: #ffe4ec;
+            padding: 20px;
+        }
+        section {
+            margin: 20px;
+            padding: 15px;
+            background-color: #fff0f5;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            background-color: white;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #f8c8dc;
+        }
+        article {
+            background-color: #ffeef2;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8c8dc;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Mi Portfolio</h1>
+    <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h2>Hola, soy Daniela</h2>
+    <p>Estudiante de 7mo año en informática</p>
+</header>
+
+<main>
+
+<section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <figure>
+        <img src="imagen.png" alt="Foto de perfil" width="200">
+        <figcaption>Tello Daniela - 18 años</figcaption>
+    </figure>
+    <p>
+        Soy estudiante de séptimo año en informática en la Escuela Técnica N°10 Martín Miguel de Güemes.
+        Me gusta la informática porque permite crear cosas útiles y aprender constantemente.
+    </p>
+</section>
+
+<section id="habilidades">
+    <h2>Habilidades Técnicas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Habilidad</th>
+                <th>Nivel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>HTML</td><td>Muy básico</td></tr>
+            <tr><td>CSS</td><td>Básico</td></tr>
+            <tr><td>JavaScript</td><td>Básico</td></tr>
+            <tr><td>Wix / Canva</td><td>Intermedio - Alto</td></tr>
+        </tbody>
+        <tfoot>
+            <tr><td colspan="2">Total: 4 habilidades</td></tr>
+        </tfoot>
+    </table>
+</section>
+
+<section id="proyectos">
+    <h2>Mis Proyectos</h2>
+
+    <article>
+        <h3>Portfolio Web en HTML</h3>
+        <p>Desarrollo de un portfolio personal.</p>
+    </article>
+
+    <article>
+        <h3>Sitio Web en Wix</h3>
+        <p>Creación de un sitio sobre The Weeknd.</p>
+        <a href="https://danielarnaveda.wixsite.com/sitio-web" target="_blank">Ver sitio</a>
+    </article>
+
+    <h3>Video de referencia</h3>
+    <iframe width="560" height="315"
+        src="https://youtu.be/LnpwxXmpjuQ?si=6VgVEiXj8sSOsZpW"
+        title="Tutorial de desarrollo web"
+        allowfullscreen>
+    </iframe>
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+
+    <form>
+
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" placeholder="Tu nombre"
+            required aria-required="true" aria-label="Nombre completo"><br><br>
+
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="ejemplo@mail.com"
+            required aria-required="true" aria-label="Correo electrónico"><br><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input id="telefono" type="tel" placeholder="+54 9..." aria-label="Teléfono"><br><br>
+
+            <label for="fecha">Fecha:</label>
+            <input id="fecha" type="date"><br><br>
+
+            <label for="edad">Edad:</label>
+            <input id="edad" type="number" min="15" max="99"><br><br>
+
+            <label for="linkedin">LinkedIn:</label>
+            <input id="linkedin" type="url" placeholder="https://..."><br><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Consulta</legend>
+
+            <p>Tipo de consulta:</p>
+            <label><input type="radio" name="tipo"> Trabajo</label>
+            <label><input type="radio" name="tipo"> Consulta</label><br><br>
+
+            <label for="asunto">Asunto:</label>
+            <select id="asunto">
+                <option>Consulta</option>
+                <option>Trabajo</option>
+                <option>Otro</option>
+            </select><br><br>
+
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" rows="5"
+            aria-describedby="ayuda"></textarea>
+            <p id="ayuda">Escribe tu mensaje aquí</p><br>
+
+            <label>
+                <input type="checkbox" required aria-required="true">
+                Acepto términos
+            </label><br><br>
+
+            <label for="cv">Adjuntar CV:</label>
+            <input id="cv" type="file" accept=".pdf"><br><br>
+
+            <button type="submit">Enviar</button>
+
+        </fieldset>
+
+    </form>
+
+    <p>Email: Danielarnaveda@sanluis.edu.ar</p>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 - Tello Daniela</p>
+</footer>
+
+</body>
+</html>
